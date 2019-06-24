@@ -1,0 +1,137 @@
+sites:
+   - name: cshapes
+     link: http://downloads.weidmann.ws/cshapes/Shapefiles/cshapes_0.6.zip
+     login: False
+     filefilter: "(shp|shx|prj|dbf)"
+
+   - name: diamonds
+     link: https://www.prio.org/Global/upload/CSCW/Data/Geographical/GIS%20filene.zip
+     login: False
+     filefilter: "(shp|shx|prj|dbf)"
+
+   - name: gems
+     link: http://www.paivilujala.com/uploads/4/7/2/1/47215405/gemdata.zip
+     login: False
+     filefilter: "(shp|shx|prj|dbf|sbn)"
+
+   - name: drugs
+     link: http://www.paivilujala.com/uploads/4/7/2/1/47215405/drugdata.zip
+     login: False
+     filefilter: "(shp|shx|prj|dbf)"
+
+   - name: petroleum
+     link: https://www.prio.org/Global/upload/CSCW/Data/Geographical/PETRODATA%20V1.2.zip
+     login: False
+     filefilter: "(shp|shx|prj|dbf)"
+
+   - name: epr
+     link: https://icr.ethz.ch/data/epr/geoepr/GeoEPR-2018.1.1.zip 
+     login: False
+     filefilter: "(shp|shx|prj|dbf)"
+
+multiple:
+   # Multiple files. Should be easy enough to "walk" the sites
+   # and retreive all links pointing to zipfiles
+   - name: nightlights
+     link: http://ngdc.noaa.gov/eog/dmsp/downloadV4composites.html
+     login: False
+
+   - name: isamhyde
+     link: https://www.atmos.illinois.edu/~meiyapp2/datasets.htm
+     login: False
+
+   - name: population_hyde
+     link: http://themasites.pbl.nl/tridion/en/themasites/hyde/download/index-2.html
+     login: False
+     
+   - name: population_gpw
+     link: http://sedac.ciesin.columbia.edu/data/collection/gpw-v3
+     login: False
+
+unknown:
+   # Don't know which one to pick
+   - name: croptypes
+     link: http://www.uni-frankfurt.de/45217892/Datens%C3%A4tze___Data_sets
+     login: False
+     
+   # Where is the data file? 
+   - name: nordhaus
+     link: http://gecon.yale.edu/
+     login: False
+
+large:
+   # These are simply large files, omitting to avoid long download times.
+   - name: globcover
+     link: http://due.esrin.esa.int/files/Globcover2009_V2.3_Global_.zip
+     login: False
+     filefilter: "tif"
+
+   - name: accesstimes
+     link: https://forobs.jrc.ec.europa.eu/products/gam/download/access_50k.zip
+     login: False
+     filefilter: "tif"
+
+netcdf:
+   # Netcdf-files. Messing up the scraper, since it assumes it has to
+   # unzip. Easy fix, just need to do it.
+   
+   - name: precip_gpcp
+     link: http://www.esrl.noaa.gov/psd/data/gridded/data.gpcp.html
+     login: False
+   - name: temp
+     link: http://www.esrl.noaa.gov/psd/data/gridded/data.ghcncams.html
+     login: False
+   - name: spi1
+     link: http://iridl.ldeo.columbia.edu/SOURCES/.IRI/.Analyses/.SPI/.SPI-CAMSOPI_1-Month/
+     login: False
+   - name: spi3
+     link: http://iridl.ldeo.columbia.edu/SOURCES/.IRI/.Analyses/.SPI/.SPI-CAMSOPI_1-Month/
+     login: False
+   - name: spei1_gdm
+     link: http://sac.csic.es/spei/map/maps.html
+     login: False
+   - name: spei3_gdm
+     link: http://sac.csic.es/spei/map/maps.html
+     login: False
+   - name: spei1_base
+     link: https://digital.csic.es/handle/10261/104742
+     login: False
+   - name: spei3_base
+     link: https://digital.csic.es/handle/10261/104742
+     login: False
+
+login:
+   - name: imr
+     link: http://sedac.ciesin.columbia.edu/data/set/povmap-global-subnational-infant-mortality-rates
+     login: False
+
+   - name: childmalnut
+     link: http://sedac.ciesin.columbia.edu/data/set/povmap-global-subnational-prevalence-child-malnutrition
+     login: False
+
+     # Email verification
+   - name: mountains
+     link: http://www.unep-wcmc.org/resources-and-data/mountains-and-forests-in-mountains
+     login: True 
+
+dead_links:
+   - name: precip_gpcc
+     link: ftp://ftp.dwd.de/pub/data/gpcc/html/fulldata_v7_doi_download.html
+     login: False
+
+
+other:
+     # Might not work?
+   - name: irrigation
+     link: https://mygeohub.org/publications/8/serve/2?render=archive
+     login: False
+     #
+   # Same as EPR?
+   - name: geoepr
+     link: http://www.icr.ethz.ch/data/geoepr
+     login: False
+
+     # Rar archive...
+   - name: gold
+     link: https://www.researchgate.net/profile/Sara_Balestri/publication/281849073_GOLDATA_12_v/data/55fb28c308ae07629e07ba5f/GOLDATA-12-v.rar
+     login: False

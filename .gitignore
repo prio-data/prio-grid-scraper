@@ -1,0 +1,12 @@
+.secret/*
+
+out/*
+!out/.gitkeep
+
+tmp/*
+!tmp/.gitkeep
+
+*.pyc
+__pycache__/*
+
+*.swp

@@ -1,0 +1,6 @@
+sites:
+   - name: cshapes
+     link: http://downloads.weidmann.ws/cshapes/Shapefiles/cshapes_0.6.zip
+     login: False
+     filefilter: "(shp|shx|prj|dbf)"
+
